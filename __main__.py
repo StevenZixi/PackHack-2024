@@ -20,7 +20,7 @@ class Handler(BaseHTTPRequestHandler):
         lastSeg = url.path.rsplit('/', 1)[-1]
         if lastSeg == "":
             lastSeg = "main.html"
-        targetFilePath = os.path.join(os.getcwd(), 'hackPack2024', lastSeg)
+        targetFilePath = os.path.join(os.getcwd(), lastSeg)
         if not os.path.isfile(targetFilePath): 
             self.send_response(404, "It seems the page is missing!!!")
             self.end_headers()  
@@ -70,7 +70,7 @@ class Handler(BaseHTTPRequestHandler):
         lastSeg = url.path.rsplit('/', 1)[-1]
         if lastSeg == "":
             lastSeg = "main.html"
-        targetFilePath = os.path.join(os.getcwd(), 'hackPack2024', lastSeg)
+        targetFilePath = os.path.join(os.getcwd(), lastSeg)
         if not os.path.isfile(targetFilePath): 
             self.send_response(404, "It seems the page is missing!!!")
             self.end_headers()  
