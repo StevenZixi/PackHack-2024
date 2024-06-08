@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+<h1>Chart of AI Net Worth</h1>
+<br>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<p>x axis: date, y axis: cost in million USD</p>
+<script>
+const xValues = [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
+const yValues = [357.89,841.13,1622.6,2867.54,4806.3,7714.7,11840.54,17284.19,23886.76,31236.92 ];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 300, max:40000}}],
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+
+
